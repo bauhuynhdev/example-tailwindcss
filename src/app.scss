@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "./fonts/inter.css";
+
+@layer components {
+    .block-before {
+        position: relative;
+        padding-left: 1rem;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0.5rem;
+            height: 100%;
+            @apply bg-black;
+            z-index: 1;
+            border-radius: 0.25rem;
+        }
+    }
+}
+
+// body {
+//     overflow: hidden overlay;
+// }
+
+.navbar-item {
+    transform: translateX(100%);
+
+    &.open {
+        transform: translateX(0);
+    }
+}
+
+.search-item {
+    transform: translateY(-100%);
+
+    &.open {
+        transform: translateY(0);
+    }
+}
